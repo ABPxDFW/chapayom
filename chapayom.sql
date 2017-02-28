@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 19, 2017 at 01:26 AM
+-- Generation Time: Feb 28, 2017 at 04:35 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -44,9 +44,18 @@ CREATE TABLE `drink` (
   `id` int(11) NOT NULL,
   `drinkName` varchar(255) NOT NULL,
   `thai` varchar(500) NOT NULL,
-  `image` varchar(255) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
   `price` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `drink`
+--
+
+INSERT INTO `drink` (`id`, `drinkName`, `thai`, `image`, `price`) VALUES
+(1, 'Naam Champoo', '', '', 25),
+(3, 'Test2', '', NULL, 25),
+(4, 'Test12', '', NULL, 25);
 
 -- --------------------------------------------------------
 
@@ -58,10 +67,31 @@ CREATE TABLE `ingredient` (
   `id` int(11) NOT NULL,
   `item` varchar(255) NOT NULL,
   `thai` varchar(500) NOT NULL,
-  `importDate` date NOT NULL,
-  `importTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `volume` decimal(11,0) NOT NULL,
-  `price` decimal(11,0) NOT NULL
+  `importTime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ingredient`
+--
+
+INSERT INTO `ingredient` (`id`, `item`, `thai`, `importTime`) VALUES
+(1, 'Pink Syrup', '', '2017-02-20 11:05:00'),
+(2, 'Coffee Mate', '', '2017-02-20 11:07:18'),
+(3, 'Sugar', '', '2017-02-20 11:07:18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `inventory`
+--
+
+CREATE TABLE `inventory` (
+  `id` int(11) NOT NULL,
+  `volume` double NOT NULL,
+  `price` double NOT NULL,
+  `ingred_id` int(11) NOT NULL,
+  `purchase_date` date NOT NULL,
+  `purchase_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -115,6 +145,13 @@ ALTER TABLE `ingredient`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `inventory`
+--
+ALTER TABLE `inventory`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `ingred_id` (`ingred_id`);
+
+--
 -- Indexes for table `order_cust`
 --
 ALTER TABLE `order_cust`
@@ -143,11 +180,16 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `drink`
 --
 ALTER TABLE `drink`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `ingredient`
 --
 ALTER TABLE `ingredient`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `inventory`
+--
+ALTER TABLE `inventory`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `order_cust`
@@ -162,6 +204,12 @@ ALTER TABLE `recipe`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `inventory`
+--
+ALTER TABLE `inventory`
+  ADD CONSTRAINT `inventory_ibfk_1` FOREIGN KEY (`ingred_id`) REFERENCES `ingredient` (`id`);
 
 --
 -- Constraints for table `order_cust`
