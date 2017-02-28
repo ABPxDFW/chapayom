@@ -59,23 +59,17 @@
 
 <div class="container-fluid">
 
-    <form class="form-horizontal" role="form" action="processFormDrink.php" method="post">
+    <form class="form-horizontal" role="form" action="processFormIngred.php" method="post">
         <div class="form-group">
             <label for="ingredient" class="col-sm-2 control-label">Ingredient Name</label>
             <div class="col-sm-6">
-                <input type="text" class="form-control" id="drinkname" placeholder="Ingredient Name" name="Ingred_Name">
+                <input type="text" class="form-control" id="ingred_name" placeholder="Ingredient Name" name="Ingred_Name">
             </div>
         </div>
         <div class="form-group">
             <label for="thai_name" class="col-sm-2 control-label">Thai Name</label>
             <div class="col-sm-6">
                 <input type="text" class="form-control" id="thai_name" placeholder="Thai Name" name="Thai_Name">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="ml" class="col-sm-2 control-label">milliliter</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" id="milliliter" placeholder="milliliter" name="Milliliter">
             </div>
         </div>
         <div class="form-group">
