@@ -107,7 +107,7 @@ mysqli_close($dbc);
 <h1 style="color:#ffffff; text-align:center"><br><br>
     <?php echo "Thank you for leaving a message." ?></h1>
 
-<br><br><h1 style="text-align:center; color:#ffffff;"><a href="index.php">Return</a></h1>
+<br><br><h1 style="text-align:center; color:#ffffff;"><a href="addIngred.php">Return</a></h1>
 
 
 </body>
