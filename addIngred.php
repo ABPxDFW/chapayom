@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/teststyle.css">
 
 </head>
 <body>
@@ -45,9 +45,9 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Add Ingredients</a></li>
+                        <li><a href="addIngred.php">Add Ingredients</a></li>
                         <li><a href="#">Check Orders</a></li>
-                        <li><a href="#">Add New Items</a></li>
+                        <li><a href="addDrinks.php">Add New Drinks</a></li>
                         <li class="divider"></li>
                         <li><a href="#">Log Out</a></li>
                     </ul>

@@ -32,7 +32,7 @@ mysqli_close($dbc);
 
     <script src="https://use.fontawesome.com/f614e0a1a6.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/teststyle.css">
     <style>
         .navbar {
 

@@ -15,7 +15,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/teststyle.css">
 
 </head>
     <body>
@@ -43,7 +43,18 @@
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Comments</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">Login</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="addDrinks.php">Add Drink</a></li>
+                                <li><a href="addIngred.php">Add Ingredient</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
 
                     </ul>
                 </div><!-- /.navbar-collapse -->
