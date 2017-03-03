@@ -1,0 +1,30 @@
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    background: #000000;
+    min-height: 75px;
+}
+
+.container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+    min-height: 75px;
+}
+
+.navbar-nav>li>a:after {
+    content: '|';
+    margin-left: 30px;
+}
+
+.navbar-nav > li:last-child > a:after {
+    content: '';
+}
+
+@media (max-width: 768px) {
+    .navbar-nav>li>a:after {
+        content: '';
+    }
+    .navbar-nav>li>a {
+        background: #111;
+        border-radius: 4px;
+        margin-bottom: 3px;
+    }
+}
