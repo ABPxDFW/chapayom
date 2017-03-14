@@ -6,8 +6,8 @@
  * Time: 9:15 PM
  */
 ?>
-
-        <p>Copyright</p>
+<hr />
+        <p><center>Copyright &copy;2017 Chapayom@bangsrimuang</center></p>
 
     </body>
 
