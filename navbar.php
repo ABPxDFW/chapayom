@@ -25,25 +25,35 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Comments</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="addDrinks.php">Add Drink</a></li>
-                                <li><a href="addIngred.php">Add Ingredient</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
+                        <?php
+                            if(isset($_SESSION['username'])) {
+                        ?>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="addDrinks.php">Add Drink</a></li>
+                                    <li><a href="addIngred.php">Add Ingredient</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        <?php
+                            }
+                            else {
+                        ?>
+                                <li><a href="#">Login</a></li>
+                    <?php
+                        }
+                    ?>
 
                     </ul>
                 </div><!-- /.navbar-collapse -->
