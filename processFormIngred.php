@@ -5,7 +5,10 @@
  * Date: 2/27/2017
  * Time: 10:39 PM
  */
-require_once ('connectVars.php');
+    require_once('startsession.php');
+    require_once('header.php');
+    require_once ('connectVars.php');
+    require_once('navbar.php');
 
 $dbc = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME) or die ('Error connecting to MySQL server: '.mysqli_error());
 

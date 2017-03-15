@@ -6,7 +6,9 @@
  * Time: 12:24 PM
  */
 
+    require_once('startsession.php');
     require_once('header.php');
+    require_once ('connectVars.php');
     require_once('navbar.php');
 ?>
 
