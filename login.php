@@ -6,10 +6,9 @@
  * Time: 10:11 PM
  */
     require_once('startsession.php');
-
-    $page_title = 'Log In';
     require_once('header.php');
     require_once('connectVars.php');
+    require_once('navbar.php');
 
     // Clear the error message
     $error_msg = "";
