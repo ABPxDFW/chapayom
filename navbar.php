@@ -27,10 +27,10 @@
 
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="about.php">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Comments</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="menu.php">Menu</a></li>
+                        <li><a href="gallery.php">Gallery</a></li>
+                        <li><a href="comment.php">Comments</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                         <?php
                             if(isset($_SESSION['username'])) {
                         ?>
